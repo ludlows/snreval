@@ -1,0 +1,1 @@
+function R = medianf(X,W)% R = medianf(X,W)  Median filter rows of X%	X has rows.  W is median filter size.  R is the result.% dpwe 1994dec20nc = size(X,2);nr = size(X,1);R = zeros(size(X));w2 = floor(W/2);xx = [zeros(nr, w2),X,zeros(nr, w2)];for c = 1:nc;  R(:,c) = median(xx(:,c-1+[1:W])')';end
