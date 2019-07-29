@@ -28,6 +28,45 @@ addpath([PESQ_MEX_PATH, 'bin/'])
 
 ## Usage
 
+    snreval('sample/arabic_400mhz.wav','-vad','sample/arabic_400mhz-vad.txt','-clean','sample/arabic_source.wav');
+
+==========================================
+Target File: sample/arabic_400mhz.wav
+ time range: 0.00000-60.00000 s
+   Ref File: sample/arabic_source.wav
+ Targ delay: -0.237 s
+NIST STNR = 23.75000 dB
+WADA SNR  = 19.62242 dB
+   SNRvad = 12.34779 dB
+      SAR = 9.07845 dB
+ PESQ NARROW MOS-LQO = 2.27732
+ PESQ NARROW MOS     = 2.61291
+==========================================
+
+
+    snreval('sample/arabic_400mhz.wav','-guessvad',1); 
+
+==========================================
+Target File: sample/arabic_400mhz.wav
+ time range: 0.00000-60.00000 s
+NIST STNR = 23.75000 dB
+WADA SNR  = 19.62242 dB
+   SNRvad = 8.10062 dB
+==========================================
+
+
+    snreval('sample/arabic_400mhz.wav','-vad','sample/arabic_400mhz-vad.txt');
+
+==========================================
+Target File: sample/arabic_400mhz.wav
+ time range: 0.00000-60.00000 s
+NIST STNR = 23.75000 dB
+WADA SNR  = 19.62242 dB
+   SNRvad = 12.34779 dB
+==========================================
+
+
+
 
 
 
